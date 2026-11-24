@@ -185,12 +185,14 @@ padding: 30px;
 background: linear-gradient(145deg, #142237, #080d16);
 border: 1px solid #263a55;
 transition: .3s;
+text-decoration: none;
+display: block;
 }
 
 .product:hover {
 transform: translateY(-8px);
 border-color: #76b5ff;
-box-shadow: 0 0 30px rgba(60,140,230,.15);
+box-shadow: 0 0 30px rgba(60,140,230,.2);
 }
 
 .product h3 {
@@ -203,6 +205,14 @@ margin-bottom: 18px;
 color: #aab9ce;
 line-height: 1.8;
 font-size: 14px;
+}
+
+.explore {
+display: inline-block;
+color: #78b8ff;
+margin-top: 20px;
+font-size: 12px;
+letter-spacing: 2px;
 }
 
 .vision {
@@ -295,13 +305,15 @@ to create something beyond traditional gaming.
 <h2>MEET THE FUTURE.</h2>
 
 <div class="product-grid">
-<div class="product">
+
+<a href="rh-one.html" class="product">
 <h3>RH ONE</h3>
 <p>
 Our next-generation gaming console concept.
 The foundation of the RIOT HOUSE ecosystem.
 </p>
-</div>
+<span class="explore">EXPLORE RH ONE →</span>
+</a>
 
 <div class="product">
 <h3>RH WATCH</h3>
@@ -327,6 +339,7 @@ floors, and surroundings become part
 of the virtual experience.
 </p>
 </div>
+
 </div>
 </section>
 
@@ -349,4 +362,5 @@ CONCEPT AND TECHNOLOGY UNDER DEVELOPMENT.
 
 </body>
 </html>
+
 
