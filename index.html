@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RIOT HOUSE | Beyond the Screen</title>
+
+<style>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+background: #05070b;
+color: white;
+font-family: Arial, sans-serif;
+overflow-x: hidden;
+}
+
+nav {
+position: fixed;
+top: 0;
+width: 100%;
+padding: 25px 7%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+background: rgba(5,7,11,.85);
+backdrop-filter: blur(15px);
+z-index: 10;
+}
+
+.logo {
+font-size: 22px;
+font-weight: 900;
+letter-spacing: 4px;
+}
+
+nav a {
+color: #b8c4d8;
+text-decoration: none;
+margin-left: 25px;
+font-size: 12px;
+letter-spacing: 2px;
+}
+
+nav a:hover {
+color: #62aaff;
+}
+
+.hero {
+min-height: 100vh;
+position: relative;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+overflow: hidden;
+padding: 120px 20px 70px;
+background:
+radial-gradient(ellipse at 50% 65%, #142b49 0%, transparent 55%),
+linear-gradient(140deg, #05070b, #101a2a, #05070b);
+}
+
+.background-text {
+position: absolute;
+font-size: clamp(100px, 20vw, 280px);
+font-weight: 900;
+line-height: .8;
+letter-spacing: -12px;
+color: rgba(92,145,207,.055);
+text-align: center;
+pointer-events: none;
+animation: drift 8s ease-in-out infinite alternate;
+}
+
+.background-text span {
+display: block;
+}
+
+@keyframes drift {
+from { transform: scale(1) translateY(0); }
+to { transform: scale(1.08) translateY(-20px); }
+}
+
+.hero-content {
+position: relative;
+z-index: 2;
+max-width: 850px;
+}
+
+.eyebrow {
+color: #78b6ff;
+letter-spacing: 6px;
+font-size: 12px;
+margin-bottom: 25px;
+}
+
+.hero h1 {
+font-size: clamp(55px, 11vw, 115px);
+font-weight: 900;
+letter-spacing: -5px;
+line-height: .95;
+}
+
+.hero h1 span {
+color: #75b7ff;
+}
+
+.hero p {
+color: #b1bfd1;
+font-size: 17px;
+line-height: 1.8;
+margin: 30px auto;
+max-width: 600px;
+}
+
+.main-button {
+display: inline-block;
+padding: 17px 32px;
+background: #76b5ff;
+color: #05070b;
+font-weight: bold;
+text-decoration: none;
+letter-spacing: 2px;
+font-size: 12px;
+transition: .3s;
+}
+
+.main-button:hover {
+background: white;
+box-shadow: 0 0 30px #4b9cff;
+transform: translateY(-3px);
+}
+
+section {
+padding: 110px 8%;
+}
+
+.section-label {
+color: #76b5ff;
+letter-spacing: 5px;
+font-size: 11px;
+margin-bottom: 20px;
+}
+
+section h2 {
+font-size: clamp(35px, 6vw, 65px);
+margin-bottom: 25px;
+}
+
+.intro {
+background: #080d16;
+text-align: center;
+}
+
+.intro p {
+max-width: 750px;
+margin: auto;
+color: #aab9ce;
+line-height: 2;
+font-size: 17px;
+}
+
+.products {
+background: #05070b;
+}
+
+.product-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+gap: 20px;
+margin-top: 45px;
+}
+
+.product {
+min-height: 250px;
+padding: 30px;
+background: linear-gradient(145deg, #142237, #080d16);
+border: 1px solid #263a55;
+transition: .3s;
+}
+
+.product:hover {
+transform: translateY(-8px);
+border-color: #76b5ff;
+box-shadow: 0 0 30px rgba(60,140,230,.15);
+}
+
+.product h3 {
+color: #83baff;
+font-size: 25px;
+margin-bottom: 18px;
+}
+
+.product p {
+color: #aab9ce;
+line-height: 1.8;
+font-size: 14px;
+}
+
+.vision {
+background:
+radial-gradient(ellipse at 80% 50%, #122b49, transparent 60%),
+#080d16;
+text-align: center;
+}
+
+.vision p {
+max-width: 700px;
+margin: auto;
+color: #b1bfd1;
+line-height: 2;
+}
+
+footer {
+padding: 40px 20px;
+background: #030508;
+text-align: center;
+color: #64748b;
+font-size: 11px;
+letter-spacing: 3px;
+}
+
+@media(max-width: 600px) {
+nav {
+padding: 20px;
+}
+
+nav a {
+margin-left: 10px;
+font-size: 9px;
+}
+
+.logo {
+font-size: 15px;
+}
+
+.hero h1 {
+letter-spacing: -3px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="logo">RIOT HOUSE</div>
+<div>
+<a href="#vision">VISION</a>
+<a href="#products">TECHNOLOGY</a>
+</div>
+</nav>
+
+<header class="hero">
+<div class="background-text">
+<span>RIOT</span>
+<span>HOUSE</span>
+</div>
+
+<div class="hero-content">
+<div class="eyebrow">THE NEXT ERA OF GAMING</div>
+<h1>BEYOND THE <span>SCREEN.</span></h1>
+<p>
+We envision a future where gaming is no longer
+something you simply watch or play.
+It's an environment you enter, experience,
+and become part of.
+</p>
+<a href="#vision" class="main-button">EXPLORE THE VISION</a>
+</div>
+</header>
+
+<section class="intro" id="vision">
+<div class="section-label">OUR PURPOSE</div>
+<h2>ENTER A NEW REALITY.</h2>
+<p>
+RIOT HOUSE is an emerging gaming technology concept
+focused on transforming how people experience digital worlds.
+Our vision brings together immersive environments,
+wearable technology, and next-generation gaming systems
+to create something beyond traditional gaming.
+</p>
+</section>
+
+<section class="products" id="products">
+<div class="section-label">THE ECOSYSTEM</div>
+<h2>MEET THE FUTURE.</h2>
+
+<div class="product-grid">
+<div class="product">
+<h3>RH ONE</h3>
+<p>
+Our next-generation gaming console concept.
+The foundation of the RIOT HOUSE ecosystem.
+</p>
+</div>
+
+<div class="product">
+<h3>RH WATCH</h3>
+<p>
+A wearable interface concept designed
+to control and navigate the gaming experience.
+</p>
+</div>
+
+<div class="product">
+<h3>RH GEAR</h3>
+<p>
+A vision for wearable equipment that
+connects physical movement with digital interaction.
+</p>
+</div>
+
+<div class="product">
+<h3>IMMERSION</h3>
+<p>
+An environment concept where walls,
+floors, and surroundings become part
+of the virtual experience.
+</p>
+</div>
+</div>
+</section>
+
+<section class="vision">
+<div class="section-label">THE BIGGER PICTURE</div>
+<h2>GAMING HAS NO BOUNDARIES.</h2>
+<p>
+Our long-term goal is to develop technology
+that makes digital experiences feel more natural,
+physical, and immersive. This is the beginning
+of the RIOT HOUSE vision.
+</p>
+</section>
+
+<footer>
+RIOT HOUSE © 2026 — BEYOND THE SCREEN.
+<br><br>
+CONCEPT AND TECHNOLOGY UNDER DEVELOPMENT.
+</footer>
+
+</body>
+</html>
+
