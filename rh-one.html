@@ -5,132 +5,114 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>RH ONE | RIOT HOUSE</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{background:#05080d;color:#fff;font-family:Arial,sans-serif}
-header{padding:22px 8%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #182b40}
-.logo{font-weight:900;letter-spacing:4px;color:#fff}
-nav a{color:#aebdce;text-decoration:none;margin-left:24px;font-size:12px;letter-spacing:1px}
-nav a:hover,.back:hover{color:#4bbcff}
-.back{display:inline-block;color:#77caff;text-decoration:none;margin:30px 8%;font-size:13px}
-.hero{min-height:620px;padding:70px 8%;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:40px;overflow:hidden}
-.tag{color:#49baff;letter-spacing:5px;font-size:11px;margin-bottom:20px}
-h1{font-size:clamp(65px,10vw,120px);letter-spacing:-7px;line-height:.9}
-.hero h2{font-size:25px;letter-spacing:5px;margin:25px 0;color:#a9dfff}
-.hero p,.section-intro{color:#9baabd;line-height:1.8;max-width:500px}
-.button{display:inline-block;margin-top:30px;padding:15px 24px;background:#168bd0;color:#fff;text-decoration:none;font-size:12px;letter-spacing:2px}
-.watch-scene{min-height:420px;display:grid;place-items:center;position:relative}
-.glow{position:absolute;width:310px;height:310px;border-radius:50%;background:#087dcc;filter:blur(100px);opacity:.3}
-.watch{position:relative;width:190px;height:270px;display:flex;align-items:center;flex-direction:column}
-.band{width:100px;height:105px;background:linear-gradient(90deg,#111820,#526170,#101820);border-radius:25px}
-.watchbody{z-index:2;width:190px;height:190px;border:7px solid #637487;border-radius:43px;background:linear-gradient(145deg,#182b40,#050a11);box-shadow:0 0 40px #087dcc66;display:grid;place-items:center}
-.screen{width:155px;height:155px;border-radius:32px;background:radial-gradient(circle at 50% 20%,#164b73,#050a12 70%);display:flex;flex-direction:column;align-items:center;justify-content:center;border:1px solid #4abaff66}
-.screen strong{font-size:27px;letter-spacing:2px}
-.screen small{color:#65caff;letter-spacing:3px;margin-top:9px;font-size:9px}
-.watch .band:last-child{height:105px}
-section{padding:90px 8%;border-top:1px solid #172637}
-.section-title{font-size:clamp(32px,5vw,55px);margin-bottom:18px}
-.section-intro{margin-bottom:38px}
-.features{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-.feature{display:block;padding:32px;background:linear-gradient(135deg,#101c2b,#080d15);border:1px solid #20374e;text-decoration:none;color:#fff;min-height:205px;transition:.25s}
-.feature:hover{border-color:#45baff;transform:translateY(-5px);background:#10243a}
-.feature .number{color:#42baff;font-size:12px;letter-spacing:3px}
-.feature h3{font-size:24px;margin:22px 0 12px}
-.feature p{color:#9baabd;line-height:1.7;font-size:14px}
-.feature span:last-child{display:inline-block;color:#55bdff;font-size:11px;letter-spacing:2px;margin-top:22px}
-.statement{text-align:center;background:linear-gradient(120deg,#071321,#0d2033,#071321)}
-.statement h2{font-size:clamp(30px,5vw,55px);margin-bottom:20px}
-.statement p{max-width:650px;margin:auto;color:#a9b8c8;line-height:1.8}
-footer{padding:35px 8%;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;color:#718196;font-size:11px;letter-spacing:2px}
-@media(max-width:750px){header{align-items:flex-start;gap:20px;flex-direction:column}nav a{margin:0 14px 0 0}.hero{grid-template-columns:1fr;padding-top:45px}.watch-scene{min-height:330px}.features{grid-template-columns:1fr}h1{letter-spacing:-4px}}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#05080d;color:white;font-family:Arial,sans-serif}
+header{padding:24px 8%;display:flex;justify-content:space-between;border-bottom:1px solid #24384b}
+.logo{font-weight:bold;letter-spacing:4px}
+header a,.back{color:#61c5ff;text-decoration:none}
+.back{display:inline-block;margin:28px 8%}
+.hero{padding:65px 8%;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:30px}
+.tag{color:#50baff;font-size:11px;letter-spacing:4px;margin-bottom:20px}
+h1{font-size:clamp(65px,10vw,110px);line-height:.9;letter-spacing:-5px}
+h2{font-size:30px;margin:25px 0 15px}
+p{color:#a5b3c2;line-height:1.8;max-width:600px}
+.watch-area{display:grid;place-items:center;min-height:350px}
+.watch{width:180px;height:260px;display:flex;align-items:center;flex-direction:column}
+.band{width:95px;height:85px;background:linear-gradient(90deg,#111,#718399,#111);border-radius:20px}
+.face{height:185px;width:180px;border:7px solid #72869a;border-radius:40px;background:linear-gradient(145deg,#174269,#050a12);display:grid;place-items:center;box-shadow:0 0 50px #087dcc66}
+.screen{height:145px;width:145px;border-radius:30px;background:#071321;display:grid;place-items:center;text-align:center;border:1px solid #55bfff66}
+.screen strong{font-size:22px}
+.screen small{display:block;color:#55bfff;margin-top:8px;letter-spacing:3px;font-size:9px}
+section{padding:75px 8%;border-top:1px solid #1a2a3b}
+.section-title{font-size:clamp(32px,5vw,50px);margin-bottom:18px}
+.features{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin-top:35px}
+.feature{display:block!important;min-height:210px;padding:30px;background:#101c2a;border:1px solid #31516e;border-radius:8px;color:white!important;text-decoration:none!important;cursor:pointer;transition:.2s}
+.feature:hover{border-color:#53bdff;background:#142b40;transform:translateY(-4px)}
+.number{color:#55baff;font-size:11px;letter-spacing:3px}
+.feature h3{font-size:24px;margin:20px 0 12px}
+.feature p{font-size:14px}
+.explore{display:inline-block;margin-top:20px;color:#55baff;font-size:11px;letter-spacing:2px}
+.statement{text-align:center;background:#091522}
+.statement p{margin:auto}
+footer{padding:30px 8%;color:#8292a5;font-size:11px}
+@media(max-width:700px){
+.hero{grid-template-columns:1fr}
+.features{grid-template-columns:1fr}
+header{gap:15px;flex-direction:column}
+}
 </style>
 </head>
 <body>
 
 <header>
 <div class="logo">RIOT HOUSE</div>
-<nav>
 <a href="index.html">HOME</a>
-<a href="#technology">TECHNOLOGY</a>
-<a href="#vision">VISION</a>
-</nav>
 </header>
 
 <a class="back" href="index.html">← BACK TO HOME</a>
 
-<main>
 <div class="hero">
 <div>
 <div class="tag">THE NEXT GENERATION OF GAMING</div>
 <h1>RH<br>ONE.</h1>
 <h2>THE CONSOLE YOU WEAR.</h2>
-<p>What if your gaming console wasn't something sitting beside your television? What if you wore it? RH ONE is the centerpiece of the RIOT HOUSE ecosystem: a wrist-worn gaming console concept designed to connect the player, their equipment, and an immersive digital world.</p>
-<a class="button" href="#technology">EXPLORE THE TECHNOLOGY</a>
+<p>RH ONE is the centerpiece of the RIOT HOUSE vision: a wrist-worn gaming console concept designed to connect players, wearable equipment, and immersive digital environments.</p>
 </div>
-<div class="watch-scene">
-<div class="glow"></div>
+<div class="watch-area">
 <div class="watch">
 <div class="band"></div>
-<div class="watchbody">
-<div class="screen">
-<strong>RH ONE</strong>
-<small>RIOT HOUSE</small>
-</div>
+<div class="face">
+<div class="screen"><div><strong>RH ONE</strong><small>RIOT HOUSE</small></div></div>
 </div>
 <div class="band"></div>
 </div>
 </div>
 </div>
 
-<section id="technology">
-<div class="tag">ONE DEVICE. FOUR PARTS OF THE EXPERIENCE.</div>
-<h2 class="section-title">MORE THAN A WATCH.</h2>
-<p class="section-intro">RH ONE is envisioned as the wearable console and central control point for an entirely new gaming experience. Explore how each part of the ecosystem fits together.</p>
+<section>
+<div class="tag">EXPLORE THE ECOSYSTEM</div>
+<h2 class="section-title">ONE DEVICE. A WHOLE NEW WORLD.</h2>
+<p>Choose a feature below to explore how the RIOT HOUSE gaming ecosystem is envisioned to work.</p>
 
 <div class="features">
-<a class="feature" href="wearable-console.html">
+
+<a class="feature" href="./wearable-console.html">
 <div class="number">01 / THE DEVICE</div>
 <h3>Wearable Console</h3>
-<p>Meet RH ONE: a gaming console designed to live on your wrist, bringing the system's core technology into a wearable form.</p>
-<span>EXPLORE THE CONSOLE →</span>
+<p>Discover RH ONE: the gaming console designed to be worn on your wrist.</p>
+<span class="explore">CLICK TO EXPLORE →</span>
 </a>
 
-<a class="feature" href="control-center.html">
+<a class="feature" href="./control-center.html">
 <div class="number">02 / THE INTERFACE</div>
 <h3>Control Center</h3>
-<p>Explore the proposed interface for launching games, managing settings, connecting equipment, and controlling your experience.</p>
-<span>EXPLORE THE CONTROL CENTER →</span>
+<p>Explore the proposed system for games, settings, connected equipment, and controls.</p>
+<span class="explore">CLICK TO EXPLORE →</span>
 </a>
 
-<a class="feature" href="rh-gear.html">
+<a class="feature" href="./rh-gear.html">
 <div class="number">03 / THE EQUIPMENT</div>
 <h3>RH GEAR</h3>
-<p>Discover the proposed wearable vest and gloves designed to connect physical movement and interaction to digital gameplay.</p>
-<span>EXPLORE RH GEAR →</span>
+<p>Discover the proposed wearable vest and interactive gaming gloves.</p>
+<span class="explore">CLICK TO EXPLORE →</span>
 </a>
 
-<a class="feature" href="immersion.html">
+<a class="feature" href="./immersion.html">
 <div class="number">04 / THE ENVIRONMENT</div>
 <h3>IMMERSION</h3>
-<p>Imagine a gaming environment where walls, floors, and the surrounding room become part of the virtual world.</p>
-<span>EXPLORE IMMERSION →</span>
+<p>Explore the vision for turning a player's physical room into part of the game.</p>
+<span class="explore">CLICK TO EXPLORE →</span>
 </a>
+
 </div>
 </section>
 
-<section class="statement" id="vision">
+<section class="statement">
 <div class="tag">THE RIOT HOUSE VISION</div>
 <h2>DON'T JUST PLAY THE GAME.<br>ENTER THE WORLD.</h2>
-<p>RIOT HOUSE is developing a vision for gaming that brings wearable technology, connected equipment, and immersive environments together. RH ONE is the starting point of that vision.</p>
-<a class="button" href="index.html">DISCOVER RIOT HOUSE</a>
+<p>RIOT HOUSE is developing a vision that brings wearable technology, connected equipment, and immersive environments together.</p>
 </section>
-</main>
 
-<footer>
-<span>RIOT HOUSE © 2026</span>
-<span>BUILT FOR A DIFFERENT KIND OF GAMING.</span>
-</footer>
-
+<footer>RIOT HOUSE © 2026 — BUILT FOR A DIFFERENT KIND OF GAMING.</footer>
 </body>
 </html>
-
